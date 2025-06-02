@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Lato, Georama } from "next/font/google"; // import all fonts
 import "./globals.css";
+import Provider from "./component/Provider";
+import Loading from "./loading";
+import { Suspense } from "react";
+import NavBar from "./component/NavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,6 +14,18 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const lato = Lato({
+  variable: "--font-lato",
+  subsets: ["latin"],
+  weight: ['400', '700'], // add weights you need
+});
+
+const georama = Georama({
+  variable: "--font-georama",
+  subsets: ["latin"],
+  weight: ['400', '700'], // add weights you want
 });
 
 export const metadata: Metadata = {
@@ -25,9 +41,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${lato.className} antialiased`}
+        // style={{ fontFamily: "var(--font-lato)" }} // apply Lato globally for body
       >
-        {children}
+        <Suspense fallback={<Loading />}>
+          <Provider>
+            {/* <NavBar /> */}
+            {children}
+          </Provider>
+        </Suspense>
       </body>
     </html>
   );
