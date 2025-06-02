@@ -17,8 +17,9 @@ const handleClick = () => {
   window.open(`https://wa.me/${contactNumber}`, '_blank');
 };
   return (
-    <div className=' h-[86px] hidden lg:grid items-center'>
-        <Box className=' flex items-center justify-between w-11/12 m-auto'>
+    <Box  className=' h-[86px] hidden lg:grid items-center mb-[20px]'>
+      <Box borderBottom={'1px'} borderBottomColor={'gray.200'}  className='w-9/12 m-auto pb-[20px] pt-[20px]'>
+        <Box className=' flex items-center justify-between '>
             <Box>
                 <Image alt='' src={Zeditlogo} />
             </Box>
@@ -43,7 +44,9 @@ const handleClick = () => {
 </Button>
             </Box>
         </Box>
-    </div>
+
+      </Box>
+    </Box>
   )
 }
 

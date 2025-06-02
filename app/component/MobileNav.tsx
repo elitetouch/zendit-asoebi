@@ -27,11 +27,11 @@ const handleClick = () => {
   window.open(`https://wa.me/${contactNumber}`, '_blank');
 };
   return (
-    <Box borderBottom={'1px'} borderBottomColor={'gray.200'} className='lg:hidden '>
+    <Box borderBottom={'1px'} borderBottomColor={'gray.300'} className='lg:hidden '>
        <Menu>
   {({ isOpen }) => (
     <>
-      <div className='h-[70px] grid items-center'>
+      <div className='h-[70px] grid items-center lg:hidden fixed w-full bg-white z-10 '>
         <Box className='flex items-center justify-between w-11/12 m-auto'>
           <Box>
             <Image alt='' src={Zeditlogo} />
@@ -64,7 +64,7 @@ const handleClick = () => {
       </div>
 
       <MenuList>
-        <Box className='lg:flex grid items-center lg:gap-x-[20px] gap-y-[20px] gap-x-[5px] p-[20px]'>
+        <Box className='lg:flex grid items-center lg:gap-x-[20px] gap-y-[20px] gap-x-[5px] p-[10px]'>
           <IconButton
             backgroundColor={'transparent'}
             icon={

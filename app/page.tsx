@@ -12,6 +12,7 @@ export default function Home() {
   };
   return (
     <div className=" bg-[#FFFFFA]">
+      
       <MobileNav handleScroll={handleScroll}/>
       <NavBar handleScroll={handleScroll}/>
     <Hero_session handleScroll={handleScroll} />
