@@ -7,8 +7,8 @@ import { Georama } from 'next/font/google'
 import { useRef } from 'react'
 import { useState, useEffect } from 'react'
 import Aos from 'aos'
-
-
+import guests from '../../public/guests.svg'
+import fstore from '../../public/fstore.svg'
 const georama = Georama({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -78,12 +78,13 @@ function Hero_session({handleScroll}:handleScroll) {
                   </Box>
                    <Box data-aos="fade-up" className=' pt-[50px]'>
                     <Text className={`${georama.className} text-[25px] font-bold text-[#031966] text-center lg:text-left`}>Our partners</Text>
-                    <Box className=' lg:flex grid gap-y-[10px] text-center lg:text-left lg:justify-normal justify-center items-center lg:gap-x-[20px] gap-x-[10px] text-[18px] lg:text-[18px] italic mt-[20px] text-[#031966]'>
-                    <Text className= {`font-semibold `}>Guest and Hosts</Text>
-                         <Text>Tix Event</Text>
-                          <Text>Event Padi</Text>
+                    <Box className=' flex gap-y-[10px] text-center lg:text-left lg:justify-normal justify-center items-center lg:gap-x-[20px] gap-x-[10px] text-[18px] lg:text-[18px] italic mt-[20px] text-[#031966]'>
+                    {/* <Text className= {`font-semibold `}>Guest and Hosts</Text> */}
+                         <Image alt='' src={guests} />
+                          <Image alt='' src={fstore} />
+                          {/* <Text>Event Padi</Text>
                            <Text>Adeola Alaga</Text>
-                            <Text>Judams Fabrics</Text>
+                            <Text>Judams Fabrics</Text> */}
                     </Box>
                    </Box>
 

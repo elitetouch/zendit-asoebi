@@ -4,6 +4,7 @@ import { Box, Button, Text, IconButton } from '@chakra-ui/react'
 import Image from 'next/image';
 import Cover from '../../public/Cover.svg'
 import Zeditlogo from '../../public/Zeditlogo.svg'
+
 import Contact_input from './Contact_input';
 import { useRef } from 'react';
 import axios from 'axios';
@@ -63,7 +64,7 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
 
   return(
-    <Box>
+    <Box className=' lg:pb-[40px]'>
 {fileName && (
   <Text fontSize="sm" color="gray.600" className='lg:grid hidden pb-[10px]'>
     Selected file: <strong>{fileName}</strong>
@@ -255,6 +256,7 @@ const handleSubmission = async () => {
       status: "success",
       duration: 5000,
       isClosable: true,
+      position: "top",
     });
 
     setContactData({ client_name: '', phone: '', email: '', list: '' });
