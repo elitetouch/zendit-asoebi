@@ -316,8 +316,8 @@ const handleSubmission = async () => {
             <IconButton 
           
          backgroundColor={'transparent'}
-  icon={<Box className=' flex items-center gap-x-[5px] '>
-<Image alt='' src={Cover} /><Box>
+  icon={<Box className=' flex items-center  '>
+<Image alt='' src={Cover} className=' h-[30px] w-[30px]'  /><Box>
 </Box>
   </Box>} // Replace with a real icon like <AddIcon />
   onClick={handleClick}
